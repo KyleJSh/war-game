@@ -21,6 +21,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var tieLabel: UILabel!
     
+    @IBOutlet weak var dealButtonImage: UIButton!
+    
     @IBOutlet weak var playerWinsLabel: UILabel!
     
     @IBOutlet weak var cpuWinsLabel: UILabel!
@@ -77,17 +79,27 @@ class ViewController: UIViewController {
             tieLabel.alpha = 1
         }
         
+        // MARK: - Final Score
+        
+        // final score results
         if leftScore == 10 {
             
             // update label
             playerWinsLabel.alpha = 1
             restartLabel.alpha = 1
+            
+            // make deal button invisible
+            dealButtonImage.alpha = 0
         }
         else if rightScore == 10 {
             
             // update label
             cpuWinsLabel.alpha = 1
             restartLabel.alpha = 1
+            
+            // make deal button invisible
+            dealButtonImage.alpha = 0
+
         }
         
     }
@@ -98,12 +110,17 @@ class ViewController: UIViewController {
         leftScore = 0
         rightScore = 0
         
+        // update score label
         leftScoreLabel.text = String(0)
         rightScoreLabel.text = String(0)
         
+        // remove results labels
         restartLabel.alpha = 0
         playerWinsLabel.alpha = 0
         cpuWinsLabel.alpha = 0
+        
+        // make deal button transparent
+        dealButtonImage.alpha = 1
         
     }
     

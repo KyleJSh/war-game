@@ -57,7 +57,6 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <variation key="heightClass=compact-widthClass=compact"/>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="hlx-SF-ISv" userLabel="Player Score StackView">
                                 <rect key="frame" x="20" y="773.5" width="47" height="68.5"/>
@@ -149,6 +148,7 @@
                     </view>
                     <connections>
                         <outlet property="cpuWinsLabel" destination="OIH-jf-PXE" id="5yq-TO-C8k"/>
+                        <outlet property="dealButtonImage" destination="EGh-9j-F0C" id="Js6-Bc-mIt"/>
                         <outlet property="leftImageView" destination="eWp-C2-jvu" id="3YC-xD-RHZ"/>
                         <outlet property="leftScoreLabel" destination="mjQ-v8-p4S" id="7cq-og-8G8"/>
                         <outlet property="playerWinsLabel" destination="134-uA-vcE" id="35N-md-lbK"/>
