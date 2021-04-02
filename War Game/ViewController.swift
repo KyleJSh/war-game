@@ -12,22 +12,19 @@ class ViewController: UIViewController {
     // MARK: - Variables and Properties
     
     @IBOutlet weak var leftImageView: UIImageView!
-    
     @IBOutlet weak var rightImageView: UIImageView!
     
     @IBOutlet weak var leftScoreLabel: UILabel!
-    
     @IBOutlet weak var rightScoreLabel: UILabel!
     
     @IBOutlet weak var tieLabel: UILabel!
-    
     @IBOutlet weak var dealButtonImage: UIButton!
     
     @IBOutlet weak var playerWinsLabel: UILabel!
-    
     @IBOutlet weak var cpuWinsLabel: UILabel!
     
     @IBOutlet weak var restartLabel: UIButton!
+    @IBOutlet weak var rulesLabel: UILabel!
     
     var leftScore = 0
     var rightScore = 0
@@ -41,6 +38,7 @@ class ViewController: UIViewController {
         playerWinsLabel.alpha = 0
         cpuWinsLabel.alpha = 0
         restartLabel.alpha = 0
+        rulesLabel.alpha = 1
         
     }
     
@@ -48,6 +46,10 @@ class ViewController: UIViewController {
     
     @IBAction func dealTapped(_ sender: Any) {
         
+        // remove rules label, only for beginning of game
+        rulesLabel.alpha = 0
+        
+        // remove tie label
         tieLabel.alpha = 0
         
         // generate random numbers between 2 - 14 representing cards
