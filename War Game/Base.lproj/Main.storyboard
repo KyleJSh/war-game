@@ -93,7 +93,7 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First to 10 wins!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9wQ-uu-zvr">
-                                <rect key="frame" x="100" y="230" width="214" height="38.5"/>
+                                <rect key="frame" x="100" y="429" width="214" height="38.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -105,8 +105,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OK7-qB-DNO" userLabel="Restart">
-                                <rect key="frame" x="117" y="763" width="180" height="64"/>
+                                <rect key="frame" x="114" y="768" width="186" height="59"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="43"/>
+                                <inset key="contentEdgeInsets" minX="3" minY="4" maxX="3" maxY="3"/>
                                 <state key="normal" title="RESTART">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -119,7 +120,6 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="9CK-To-4w2" firstAttribute="top" secondItem="Z6X-iY-D9k" secondAttribute="bottom" constant="55" id="18g-3C-PHY"/>
-                            <constraint firstItem="9wQ-uu-zvr" firstAttribute="top" secondItem="9CK-To-4w2" secondAttribute="bottom" constant="5" id="82C-Qf-sme"/>
                             <constraint firstAttribute="bottom" secondItem="aMc-af-jzD" secondAttribute="bottom" id="8Ko-w2-Ed8"/>
                             <constraint firstItem="21a-K9-epr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BXc-IT-gSN"/>
                             <constraint firstAttribute="trailing" secondItem="aMc-af-jzD" secondAttribute="trailing" id="Cnm-mp-3ug"/>
@@ -128,12 +128,13 @@
                             <constraint firstItem="hlx-SF-ISv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Jqe-He-gVL"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="rWR-yR-FRC" secondAttribute="bottom" constant="20" id="VBX-OW-zt3"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hlx-SF-ISv" secondAttribute="bottom" constant="20" id="Zyn-Ch-Qh2"/>
-                            <constraint firstItem="9wQ-uu-zvr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dQy-5p-uks"/>
                             <constraint firstItem="9CK-To-4w2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dsO-Nr-607"/>
                             <constraint firstItem="Z6X-iY-D9k" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eGz-EV-027"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rWR-yR-FRC" secondAttribute="trailing" constant="20" id="flt-iK-GJ4"/>
+                            <constraint firstItem="9wQ-uu-zvr" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="kJG-s5-C4C"/>
                             <constraint firstItem="aMc-af-jzD" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="knK-dX-Dd6"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="OK7-qB-DNO" secondAttribute="bottom" constant="35" id="oN8-vD-n2v"/>
+                            <constraint firstItem="9wQ-uu-zvr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pzo-Uv-buz"/>
                             <constraint firstItem="Z6X-iY-D9k" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="rOt-TS-bqv"/>
                             <constraint firstItem="OK7-qB-DNO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sAi-99-NZ3"/>
                         </constraints>

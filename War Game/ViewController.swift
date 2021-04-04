@@ -31,15 +31,25 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        displayRules()
+        
         tieLabel.alpha = 0
         restartLabel.alpha = 0
-        rulesLabel.alpha = 1
         
+        leftImageView.alpha = 0
+        rightImageView.alpha = 0
+        
+        restartLabel.layer.borderWidth = 2
+        restartLabel.layer.borderColor = CGColor(red: 255, green: 255, blue: 255, alpha: 1)
     }
     
     // MARK: - Methods
     
     @IBAction func dealTapped(_ sender: Any) {
+        
+        // show left and right cards
+        leftImageView.alpha = 1
+        rightImageView.alpha = 1
         
         // remove rules label, only for beginning of game
         rulesLabel.alpha = 0
@@ -81,7 +91,7 @@ class ViewController: UIViewController {
         // final score results
         if leftScore == 10 {
             
-            showAlert(title: "Congrats!", message: "You have won")
+            showAlert(title: "Congrats!", message: "You have won! Hit RESTART to play again")
             
             // update label
             restartLabel.alpha = 1
@@ -91,7 +101,7 @@ class ViewController: UIViewController {
         }
         else if rightScore == 10 {
             
-            showAlert(title: "Sorry!", message: "You were beaten by a computer")
+            showAlert(title: "Sorry!", message: "You were beaten by a computer! Hit RESTART to play again")
             
             // update label
             restartLabel.alpha = 1
@@ -100,14 +110,20 @@ class ViewController: UIViewController {
             dealButtonImage.alpha = 0
 
         }
-        
     }
     
     @IBAction func restartTapped(_ sender: Any) {
         
+        // display rules
+        displayRules()
+        
         // reset scores
         leftScore = 0
         rightScore = 0
+        
+        // remove images
+        leftImageView.alpha = 0
+        rightImageView.alpha = 0
         
         // update score label
         leftScoreLabel.text = String(0)
@@ -136,5 +152,11 @@ class ViewController: UIViewController {
         present(alert, animated: true, completion: nil)
     }
     
-}
+    func displayRules() {
+        
+        // show rules label
+        rulesLabel.alpha = 1
 
+    }
+    
+}
