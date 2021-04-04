@@ -19,10 +19,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var tieLabel: UILabel!
     @IBOutlet weak var dealButtonImage: UIButton!
-    
-    @IBOutlet weak var playerWinsLabel: UILabel!
-    @IBOutlet weak var cpuWinsLabel: UILabel!
-    
+        
     @IBOutlet weak var restartLabel: UIButton!
     @IBOutlet weak var rulesLabel: UILabel!
     
@@ -35,8 +32,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         tieLabel.alpha = 0
-        playerWinsLabel.alpha = 0
-        cpuWinsLabel.alpha = 0
         restartLabel.alpha = 0
         rulesLabel.alpha = 1
         
@@ -86,8 +81,9 @@ class ViewController: UIViewController {
         // final score results
         if leftScore == 10 {
             
+            showAlert(title: "Congrats!", message: "You have won")
+            
             // update label
-            playerWinsLabel.alpha = 1
             restartLabel.alpha = 1
             
             // make deal button invisible
@@ -95,8 +91,9 @@ class ViewController: UIViewController {
         }
         else if rightScore == 10 {
             
+            showAlert(title: "Sorry!", message: "You were beaten by a computer")
+            
             // update label
-            cpuWinsLabel.alpha = 1
             restartLabel.alpha = 1
             
             // make deal button invisible
@@ -118,12 +115,25 @@ class ViewController: UIViewController {
         
         // remove results labels
         restartLabel.alpha = 0
-        playerWinsLabel.alpha = 0
-        cpuWinsLabel.alpha = 0
         
         // make deal button transparent
         dealButtonImage.alpha = 1
         
+    }
+    
+    func showAlert(title:String, message:String) {
+        
+        // create the alert
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        
+        // create alert action
+        let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        
+        // add action button to alert
+        alert.addAction(okAction)
+        
+        // present the alert
+        present(alert, animated: true, completion: nil)
     }
     
 }
