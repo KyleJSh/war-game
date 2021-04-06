@@ -18,6 +18,7 @@ class SoundManager {
         case tick
         case success
         case fail
+        case gameStart
     }
     
     func playSound(effect:SoundEffect) {
@@ -25,14 +26,16 @@ class SoundManager {
         var soundFilename = ""
         
         switch effect {
-        case .shuffle:
-            soundFilename = "shuffle"
-        case .tick:
-            soundFilename = "tick"
-        case .success:
-            soundFilename = "success"
-        case .fail:
-            soundFilename = "fail"
+            case .shuffle:
+                soundFilename = "shuffle"
+            case .tick:
+                soundFilename = "tick"
+            case .success:
+                soundFilename = "success"
+            case .fail:
+                soundFilename = "fail"
+            case .gameStart:
+                soundFilename = "gameStart"
         }
         
         let bundlePath = Bundle.main.path(forResource: soundFilename, ofType: "mp3")

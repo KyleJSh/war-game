@@ -38,7 +38,7 @@ class ViewController: UIViewController {
         displayRules()
         
         // play shuffle sound at beginning of game
-        soundPlayer.playSound(effect: .shuffle)
+        soundPlayer.playSound(effect: .gameStart)
         
         // make tie, restart, and left and right image labels invisible
         tieLabel.alpha = 0
