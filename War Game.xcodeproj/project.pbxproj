@@ -11,6 +11,7 @@
 		C8284529261C115B00E69AA6 /* shuffle.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C8284526261C115B00E69AA6 /* shuffle.mp3 */; };
 		C828452A261C115B00E69AA6 /* tick.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C8284527261C115B00E69AA6 /* tick.mp3 */; };
 		C828452B261C115B00E69AA6 /* success.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C8284528261C115B00E69AA6 /* success.mp3 */; };
+		C828452E261C12DD00E69AA6 /* fail.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C828452D261C12DD00E69AA6 /* fail.mp3 */; };
 		C8642BA32616B35A001663FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8642BA22616B35A001663FA /* AppDelegate.swift */; };
 		C8642BA52616B35A001663FA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8642BA42616B35A001663FA /* SceneDelegate.swift */; };
 		C8642BA72616B35A001663FA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8642BA62616B35A001663FA /* ViewController.swift */; };
@@ -24,6 +25,7 @@
 		C8284526261C115B00E69AA6 /* shuffle.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = shuffle.mp3; sourceTree = "<group>"; };
 		C8284527261C115B00E69AA6 /* tick.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = tick.mp3; sourceTree = "<group>"; };
 		C8284528261C115B00E69AA6 /* success.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = success.mp3; sourceTree = "<group>"; };
+		C828452D261C12DD00E69AA6 /* fail.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = fail.mp3; sourceTree = "<group>"; };
 		C8642B9F2616B35A001663FA /* War Game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "War Game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8642BA22616B35A001663FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C8642BA42616B35A001663FA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -50,6 +52,7 @@
 			children = (
 				C8284526261C115B00E69AA6 /* shuffle.mp3 */,
 				C8284528261C115B00E69AA6 /* success.mp3 */,
+				C828452D261C12DD00E69AA6 /* fail.mp3 */,
 				C8284527261C115B00E69AA6 /* tick.mp3 */,
 			);
 			path = Sounds;
@@ -147,6 +150,7 @@
 				C8642BAF2616B35C001663FA /* LaunchScreen.storyboard in Resources */,
 				C828452A261C115B00E69AA6 /* tick.mp3 in Resources */,
 				C8642BAC2616B35C001663FA /* Assets.xcassets in Resources */,
+				C828452E261C12DD00E69AA6 /* fail.mp3 in Resources */,
 				C8284529261C115B00E69AA6 /* shuffle.mp3 in Resources */,
 				C828452B261C115B00E69AA6 /* success.mp3 in Resources */,
 				C8642BAA2616B35A001663FA /* Main.storyboard in Resources */,

@@ -26,16 +26,23 @@ class ViewController: UIViewController {
     var leftScore = 0
     var rightScore = 0
     
+    // create SoundManager instance
+    var soundPlayer = SoundManager()
+    
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // display the rules of the game
         displayRules()
         
+        // play shuffle sound at beginning of game
+        soundPlayer.playSound(effect: .shuffle)
+        
+        // make tie, restart, and left and right image labels invisible
         tieLabel.alpha = 0
         restartLabel.alpha = 0
-        
         leftImageView.alpha = 0
         rightImageView.alpha = 0
         
@@ -46,6 +53,9 @@ class ViewController: UIViewController {
     // MARK: - Methods
     
     @IBAction func dealTapped(_ sender: Any) {
+        
+        // play sound for deal
+        soundPlayer.playSound(effect: .tick)
         
         // show left and right cards
         leftImageView.alpha = 1
@@ -91,6 +101,9 @@ class ViewController: UIViewController {
         // final score results
         if leftScore == 10 {
             
+            // play success sound
+            soundPlayer.playSound(effect: .success)
+            
             showAlert(title: "Congrats!", message: "You have won! Hit RESTART to play again")
             
             // update label
@@ -100,6 +113,9 @@ class ViewController: UIViewController {
             dealButtonImage.alpha = 0
         }
         else if rightScore == 10 {
+            
+            // play fail sound
+            soundPlayer.playSound(effect: .fail)
             
             showAlert(title: "Sorry!", message: "You were beaten by a computer! Hit RESTART to play again")
             
@@ -113,6 +129,9 @@ class ViewController: UIViewController {
     }
     
     @IBAction func restartTapped(_ sender: Any) {
+        
+        // play deal sound
+        soundPlayer.playSound(effect: .shuffle)
         
         // display rules
         displayRules()
